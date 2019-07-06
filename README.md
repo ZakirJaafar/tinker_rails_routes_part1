@@ -67,9 +67,9 @@ get 'test/show'
 
 The code `get 'test/show'` will insist the URL be `localhost:3000/test/show`since the routes is different:
 
-![tinker rails routes2](/Users/ZakirJaafar/Dropbox/Ruby Coding Notes/tinker rails routes2.png)
 
 
+![image-20190706232319375](/Users/ZakirJaafar/Library/Application Support/typora-user-images/image-20190706232319375.png)
 
 ### Where: GitHub Repo
 
