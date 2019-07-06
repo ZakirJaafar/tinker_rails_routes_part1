@@ -20,13 +20,63 @@ The best way to learn (re-learn) is to clone the repo to your local, run Rails s
 
 ### How: My Understanding on Rails Routes
 
+I am going to tackle the basic first and forget for now the inner parts of Rails. I am also going the manual way rather than use Rails `generator`. 
+
+First let's dwell on the MVC Rails architecture. The simpler version as below (image from https://medium.com/@pattyjburns/a-primer-on-ruby-on-rails-for-product-managers-5b4f8e28b3ae)
+
+![MVC Rails Architecture](https://miro.medium.com/max/700/1*SIW0API8ctEEyVbZ2V4KIg.png)
+
+On the surface it is enough know about Rails Routes using `View`, `Controller`, and `Route` part of the MVC. The normal way is also to include `Model` part of the MVC but we are not going to do that in this exercise. 
+
+Once I have installed the simple Rails app, ==First== I added the below code to the file `routes.rb` 
+
+```
+get '/test/', :to => 'test#show'
+```
+
+
+
+==Second== then I created a new folder `test` within the View folder and also created a new `show.html.erb`file within that folder `app/views/test/show.html.erb` In that file `show.html.erb` file I added this code:
+
+```
+<%= "hello world" %>
+```
+
+==Third== then I also created a new file called `test_controller.rb` within the Controllers folder `app/controllers/test_controller.rb` Within this `test_controller.rb` file I added this code:
+
+```
+class TestController < ApplicationController
+def show
+end
+end
+```
+
+
+
+The `get '/test/', :to => 'test#show'`  code is to modify the Rails Router part of the MVC. The above code will give the `routes` below screen shot:
+
+![tinker rails routes](/Users/ZakirJaafar/Dropbox/Ruby Coding Notes/tinker rails routes.png)
+
+The code above `get '/test/', :to => 'test#show'` will allow you the URL `localhost:3000/test`Which means without `localhost:3000/test/show` and only `localhost:3000/test` is enough to call the View file `show.html.erb` with Hello Word rendered. 
+
+Whereas below code in the`routes.rb` will insist that the URL be `localhost:3000/test/show`
+
+```
+get 'test/show'
+```
+
+The code `get 'test/show'` will insist the URL be `localhost:3000/test/show`since the routes is different:
+
+![tinker rails routes2](/Users/ZakirJaafar/Dropbox/Ruby Coding Notes/tinker rails routes2.png)
+
+
+
 ### Where: GitHub Repo
 
-
+The GitHub repo is was pushed from my local. Hopefully you can fire the Rails server after you have cloned in your local. I installed Rails without test and turbolinks. I used Postgresql instead. I probably added stuff not necessary for this demo. What's important is that I got my point across on Rails Routes.  
 
 ### When: Date Created & Updated
 
 **Created**:  6th July 2019
 
 **Updated**: 
-# tinker_rails_routes
