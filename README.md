@@ -1,4 +1,4 @@
-## Tinker - Rails Routes
+## Tinker - Rails Routes - part 1
 
 ### Intro
 
