@@ -55,7 +55,7 @@ end
 
 The `get '/test/', :to => 'test#show'`  code is to modify the Rails Router part of the MVC. The above code will give the `routes` below screen shot:
 
-![tinker rails routes](/Users/ZakirJaafar/Dropbox/Ruby Coding Notes/tinker rails routes.png)
+![tinker rails routes](http://ww1.sinaimg.cn/large/006tNc79gy1g4rgaq8xrbj309800za9z.jpg)
 
 The code above `get '/test/', :to => 'test#show'` will allow you the URL `localhost:3000/test`Which means without `localhost:3000/test/show` and only `localhost:3000/test` is enough to call the View file `show.html.erb` with Hello Word rendered. 
 
@@ -67,7 +67,7 @@ get 'test/show'
 
 The code `get 'test/show'` will insist the URL be `localhost:3000/test/show`since the routes is different:
 
-
+![room routes new](/Users/ZakirJaafar/Dropbox/Ruby Coding Notes/room routes new.png)
 
 ![image-20190706232319375](/Users/ZakirJaafar/Library/Application Support/typora-user-images/image-20190706232319375.png)
 
